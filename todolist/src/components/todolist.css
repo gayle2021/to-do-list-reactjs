@@ -1,0 +1,62 @@
+.card {
+    margin: 50px 500px 50px 500px
+}
+
+/* #ss{
+    position: absolute;
+  right: 110px;
+} */
+
+#formgroup{
+    display: flex;
+    margin: 20px;
+}
+
+
+
+#toast{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    margin-bottom: 5px;
+}
+
+.toast{
+    font-size: 20px;
+}
+
+.completed{
+    text-decoration: line-through;
+
+}
+
+#toastbody{
+    min-width: 640px;
+    width: 640px;
+    max-width: 640px;
+    text-align: left;
+}
+
+/* #update{
+    margin-left: 8px;
+} */
+
+#delet{
+    margin-left: 10px;
+} 
+
+#buttons{
+    display: inline-flex;
+    align-items: center;
+    min-width: 100px;
+    width: 100px;
+    max-width: 100px;}
+
+#status{
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+

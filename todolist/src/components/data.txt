@@ -1,0 +1,36 @@
+
+<Toast id="toast">
+            <Toast.Body id="toastbody">
+              Hello, world! s ismdf ghfggg gggggg ggg gggg gg gggggggggggggg
+              gggggggggggggggggggg gggg ggggggggggg gdfg dfgdfessage.
+            </Toast.Body>
+            <Button id="update" variant="success">
+              update
+            </Button>
+            <Button id="delet" variant="danger">
+              delete
+            </Button>
+          </Toast>
+          <Toast id="toast">
+            <Toast.Body id="toastbody">
+              Hello, world! This is a toast message.
+            </Toast.Body>
+            <Button id="update" variant="success">
+              update
+            </Button>
+            <Button id="delet" variant="danger">
+              delete
+            </Button>
+          </Toast>
+-------------------------------------------------------
+
+function shuffleArray(array) {
+  let i = array.length - 1;
+  for (; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  return array;
+}
