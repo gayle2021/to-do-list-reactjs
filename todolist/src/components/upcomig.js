@@ -11,23 +11,22 @@ function Upcoming(Props) {
   const handleShow = () => {
     setShow(true);
   };
-  // const handleClose = () => {
-  //   setShow(false);
-  // };
+
+  const handleClose = () => {
+    setShow(false);
+  };
 
   const [rend, setRend] = useState(false);
 
   const rendr = (x) => {
+    // setData(Props.senddata);
     axios.get(`http://localhost:8080/showupcoming`).then((res) => {
       setData(res.data);
-      setS([...s, 1]);
-
-      if (rend === false) {
-        setRend(true);
-      }
+      // setS([...s, 1]);
       // handleClose();
     });
   };
+
   useEffect(() => {
     rendr();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -41,12 +40,13 @@ function Upcoming(Props) {
 
   const changeStatus = (e, i) => {
     axios.post(`http://localhost:8080/updatestatus/${i}/${e}`).then((res) => {
-      setRend(false);
+      // setRend(false);
       // Props.childrender(false);
-
       setS([...s, 1]);
+      handleClose();
     });
   };
+
   return (
     <div>
       {data.map((item) => {
@@ -58,6 +58,7 @@ function Upcoming(Props) {
                 id="update"
                 onClick={(e) => {
                   setID(item.id);
+                  console.log("clicked");
                   handleShow();
                 }}
                 variant="success"
