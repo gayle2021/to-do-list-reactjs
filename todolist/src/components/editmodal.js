@@ -3,8 +3,12 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 function Editmodal(props) {
+
+  console.log(props.show);
+
   const [updatedTask, setupdatedTask] = useState("company");
-  const [s] = useState([]);
+  const [s, setS] = useState([]);
+
   const editTask = (e) => {
     axios
       .post(`http://localhost:8080/updatetask/${e}`, {
@@ -12,8 +16,8 @@ function Editmodal(props) {
       })
       .then((res) => {
         props.rendr(false);
-
         // console.log(res.data);
+        console.log(props);
         handleClose();
       });
   };
@@ -32,7 +36,8 @@ function Editmodal(props) {
     if (props.show === true) {
       handleShow();
     } else {
-      handleClose();
+      // handleClose();
+      // handleShow();
     }
   }, [props.show, s]);
 
