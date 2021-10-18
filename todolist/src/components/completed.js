@@ -13,11 +13,11 @@ function Completed() {
   };
 
   const [rend, setRend] = useState(false);
-
+  
   const rendr = (x) => {
     axios.get(`http://localhost:8080/showcompleted`).then((res) => {
       setData(res.data);
-      setS([...s, 1]);
+      // setS([...s, 1]);
 
       if (rend === false) {
         setRend(true);
@@ -26,8 +26,10 @@ function Completed() {
   };
   useEffect(() => {
     rendr();
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [s, rend]);
+
   const deletID = (e) => {
     axios.delete(`http://localhost:8080/delete/${e}`).then((res) => {
       setS([...s, 1]);
