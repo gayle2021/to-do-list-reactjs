@@ -225,33 +225,7 @@ function Todolist() {
       </Card>
 
       <Editmodal show={show} editid={id} rendr={rendr}></Editmodal>
-      {/* <Modal show={show}>
-        <Modal.Header>
-          <Modal.Title>Update Task</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form.Control
-            type="text"
-            onChange={(e) => {
-              setupdatedTask(e.target.value);
-            }}
-            placeholder="update task"
-          />
-        </Modal.Body>
-        <Modal.Footer>
-          <Button
-            variant="primary"
-            onClick={() => {
-              editTask(id);
-            }}
-          >
-            submit
-          </Button>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal> */}
+
     </div>
   );
 }
