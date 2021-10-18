@@ -82,6 +82,7 @@ function Reports() {
                     0,
                     item.completed_at.length - 14
                   )}
+                  {console.log(item)}
                 </td>
               </tr>
             );
