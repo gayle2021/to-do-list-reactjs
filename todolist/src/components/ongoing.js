@@ -17,11 +17,7 @@ function Ongoing() {
   const rendr = (x) => {
     axios.get(`http://localhost:8080/showongoing`).then((res) => {
       setData(res.data);
-      setS([...s, 1]);
-
-      if (rend === false) {
-        setRend(true);
-      }
+      // setS([...s, 1]);
     });
   };
   useEffect(() => {
