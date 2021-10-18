@@ -56,24 +56,13 @@ function Todolist() {
     });
   };
 
-  // const editTask = (e) => {
-  //   axios
-  //     .post(`http://localhost:8080/updatetask/${e}`, {
-  //       task: updatedTask,
-  //     })
-  //     .then((res) => {
-  //       setS([...s, 1]);
-  //       handleClose();
-  //     });
-  // };
+
 
   const [show, setShow] = useState(false);
   const handleShow = () => {
     setShow(true);
   };
-  // const handleClose = () => {
-  //   setShow(false);
-  // };
+ 
   const deletID = (e) => {
     axios.delete(`http://localhost:8080/delete/${e}`).then((res) => {
       setS([...s, 1]);
@@ -225,9 +214,6 @@ function Todolist() {
       </Card>
 
       <Editmodal show={show} editid={id} rendr={rendr}></Editmodal>
-
-    </div>
-  );
-}
+      
 
 export default Todolist;
